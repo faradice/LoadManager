@@ -18,6 +18,7 @@ public class MulticastReceiver extends Thread {
 				DatagramPacket packet = new DatagramPacket(buf, buf.length);
 				socket.receive(packet);
 				String received = new String(packet.getData(), 0, packet.getLength());
+				System.out.println("Received: "+received);
 				if ("end".equals(received)) {
 					break;
 				}
