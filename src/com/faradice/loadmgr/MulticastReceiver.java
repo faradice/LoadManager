@@ -27,4 +27,9 @@ public class MulticastReceiver extends Thread {
 			ex.printStackTrace();
 		}
 	}
+
+	public static void main(String[] args) {
+		MulticastReceiver mcr = new MulticastReceiver();
+		mcr.start();
+	}
 }

@@ -19,4 +19,9 @@ public class MulticastPublisher {
 		socket.send(packet);
 		socket.close();
 	}
+	
+	public static void main(String[] args) throws Exception {
+		MulticastPublisher mp = new MulticastPublisher();
+		mp.multicast("hi");
+	}
 }
