@@ -29,6 +29,7 @@ public class MulticastReceiver extends Thread {
 	}
 
 	public static void main(String[] args) {
+		System.setProperty("java.net.preferIPv4Stack", "true");
 		MulticastReceiver mcr = new MulticastReceiver();
 		mcr.start();
 	}

@@ -21,6 +21,7 @@ public class MulticastPublisher {
 	}
 	
 	public static void main(String[] args) throws Exception {
+		System.setProperty("java.net.preferIPv4Stack", "true");
 		MulticastPublisher mp = new MulticastPublisher();
 		mp.multicast("hi");
 	}
