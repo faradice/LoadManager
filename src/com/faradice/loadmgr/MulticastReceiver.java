@@ -12,6 +12,7 @@ public class MulticastReceiver extends Thread {
 	@Override
 	public void run() {
 		try (MulticastSocket socket = new MulticastSocket(4446)) {
+			byte[] buffer = new byte[8196];
 			group = InetAddress.getByName("230.0.0.0");
 			socket.joinGroup(group);
 			while (true) {
